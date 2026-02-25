@@ -16,53 +16,90 @@ body{
 }
 
 header{
-    padding:30px 20px;
+    padding:40px 20px;
 }
 
 .logo{
-    max-width:300px;
+    max-width:350px;
+    width:100%;
 }
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRNy9yvLZQhvsFqk2lRFCsxwnUjduMAf30pg&s" alt="Logo Qué Bacana Radio" width="350">
-    
-.live-btn{
-    background:#ff0000;
-    padding:15px 30px;
-    border:none;
-    border-radius:50px;
-    font-size:18px;
-    color:white;
-    cursor:pointer;
+h1{
+    margin:10px 0;
+}
+
+audio{
     margin-top:20px;
-    box-shadow:0 0 20px red;
+    width:250px;
 }
 
 section{
-    padding:40px 20px;
+    padding:60px 20px;
 }
 
 h2{
     color:#ff9800;
+    margin-bottom:30px;
 }
+
+/* TOP 5 */
 
 .top5{
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:20px;
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
 }
 
 .card{
     background:#111;
     padding:15px;
     border-radius:15px;
-    box-shadow:0 0 15px rgba(255,0,0,0.4);
+    box-shadow:0 0 20px rgba(255,0,0,0.4);
 }
 
 iframe{
     width:100%;
     border-radius:10px;
 }
+
+/* PUBLICIDAD */
+
+#publicidad{
+    background:#0b0b1f;
+}
+
+.patrocinadores{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:30px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.empresa{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+    box-shadow:0 0 20px rgba(255,0,0,0.3);
+}
+
+.empresa:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,152,0,0.7);
+}
+
+.empresa img{
+    max-width:100%;
+    max-height:120px;
+}
+
+/* WHATSAPP */
 
 .whatsapp{
     position:fixed;
@@ -74,6 +111,7 @@ iframe{
     font-size:24px;
     text-decoration:none;
     color:white;
+    box-shadow:0 0 20px #25d366;
 }
 </style>
 </head>
@@ -81,9 +119,10 @@ iframe{
 <body>
 
 <header>
-    <img src="logo.jpg" class="logo">
+    <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRNy9yvLZQhvsFqk2lRFCsxwnUjduMAf30pg&s" alt="Qué Bacana Radio">
     <h1>Qué Bacana Radio 89.2 FM</h1>
     <p>Medellín - Colombia</p>
+
     <audio controls autoplay>
         <source src="https://c11.radioboss.fm:8440/stream" type="audio/mpeg">
     </audio>
@@ -117,6 +156,30 @@ iframe{
         <div class="card">
             <h3>#5</h3>
             <iframe height="200" src="https://www.youtube.com/embed/_074-hgpjOs" allowfullscreen></iframe>
+        </div>
+
+    </div>
+</section>
+
+<section id="publicidad">
+    <h2>💼 Empresas que Confían en Nosotros</h2>
+
+    <div class="patrocinadores">
+
+        <div class="empresa">
+            <img src="mincacharros.jpg" alt="Min Cacharros">
+        </div>
+
+        <div class="empresa">
+            <img src="tecniexcar.jpg" alt="Tecniexcar Seguridad">
+        </div>
+
+        <div class="empresa">
+            <img src="anamariafranco.jpg" alt="Ana María Franco">
+        </div>
+
+        <div class="empresa">
+            <img src="mueblerianorena.jpg" alt="Mueblería Noreña">
         </div>
 
     </div>
